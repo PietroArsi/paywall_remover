@@ -1,4 +1,9 @@
 let button1 = document.getElementById("button1");
+let darkmode = document.getElementById("darkmode");
+
+chrome.storage.sync.get("darkModeToggle", ({ darkModeToggle }) => {
+    console.log("TEST");
+});
 
 button1.addEventListener("click", async () => {
     let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
@@ -11,3 +16,15 @@ button1.addEventListener("click", async () => {
        });
     });
 });
+
+darkmode.addEventListener("click", async () => {
+    chrome.storage.sync.get("darkModeToggle", ({ darkModeToggle }) => {
+        console.log("TEST");
+    });
+});
+
+// function toggleDarkMode() {
+//     chrome.storage.sync.get("darkModeToggle", ({ darkModeToggle }) => {
+//       console.log("TEST")
+//     });
+// }

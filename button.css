@@ -4,6 +4,20 @@ button {
     border: none;
     border-radius: 2px;
 }
+
+html, body {
+    width: 170px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
   
 button.current {
 box-shadow: 0 0 0 2px white,
